@@ -1,0 +1,248 @@
+.loadingScreenContainer {
+  position: absolute;
+  z-index: 5;
+  display: none;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.85;
+  width: 100%;
+  min-height: 100%;
+}
+.loadingAnimationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  min-height: 100%;
+}
+.loadingAnimation {
+  display: none;
+  height: 300px;
+  width: 300px;
+}
+.Intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 120px;
+  padding: 25px;
+}
+.IntroTitle {
+  font-weight: bold;
+  font-size: 40px;
+}
+.IntroBy {
+  padding-top: 20px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.loginSignupContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  padding: 25px;
+  margin: 0 0 40px 0;
+  background-color: rgb(177, 177, 177);
+  color: black;
+  border-radius: 5px;
+}
+.loginSignupSelectors {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.titleSelector {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgb(109, 109, 109);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.active {
+  background-color: aquamarine;
+}
+.ActionType {
+  height: 80px;
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.ActionTypeIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: aquamarine;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.selectedActionTypeIcon {
+  background-color: rgb(0, 252, 168);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.ActionTypeIcon > img {
+  width: 30px;
+  height: 30px;
+}
+.ActionTypeIcon > span {
+  font-size: 10px;
+  pointer-events: none;
+}
+.ActionTypeIcon:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.ActionTypeIcon:active {
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.formConatiner {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: aquamarine;
+  display: flex;
+  padding: 0 0 20px 0;
+}
+.Form {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.Form div {
+  position: relative;
+  height: 30px;
+  margin-top: 30px;
+}
+.Form div input {
+  border: none;
+  background-color: aquamarine;
+  border-bottom: solid 1px black;
+  transition: all 0.1s;
+}
+.Form div span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  transition: all 0.1s;
+  pointer-events: none;
+}
+.Form div label {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  font-size: 11px;
+  color: crimson;
+}
+.Form div input:focus {
+  outline: none;
+  border-bottom: solid 2px rgb(17, 120, 255);
+  transition: all 0.1s;
+}
+.Form div input:valid + span {
+  top: -15px;
+  left: -3px;
+  font-size: 10px;
+  font-weight: bold;
+  color: black;
+}
+.Form div input:focus + span {
+  top: -15px;
+  left: -3px;
+  font-size: 10px;
+  font-weight: bold;
+  color: rgb(17, 120, 255);
+}
+.LoginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 252, 168);
+  color: black;
+  width: 40%;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.LoginButton:hover {
+  background-color: rgb(1, 185, 124);
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.LoginButton:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+.LoginWithEmailLinkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 252, 168);
+  color: black;
+  width: 80%;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.LoginWithEmailLinkButton:hover {
+  background-color: rgb(1, 185, 124);
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.LoginWithEmailLinkButton:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+.SignupButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 252, 168);
+  color: black;
+  width: 40%;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.SignupButton:hover {
+  background-color: rgb(1, 185, 124);
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.SignupButton:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+.visible {
+  display: flex;
+}

@@ -1,0 +1,536 @@
+.searchBarArea {
+  padding: 5px;
+}
+.searchBarAndFiltersContainer {
+  min-width: 90%;
+  background-color: rgb(44, 44, 44);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.searchByFilterContainer {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 0 10px;
+}
+.searchByFilter {
+  min-width: 200px;
+  height: 30%;
+  background-color: aliceblue;
+  padding: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top: solid 3px rgb(44, 44, 44);
+  border-bottom: solid 3px rgb(44, 44, 44);
+  border-left: solid 3px rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  transition: all 0.3s;
+}
+.dropDownArrowContainer {
+  min-width: 30px;
+  height: 30%;
+  background-color: aliceblue;
+  padding: 3px;
+  border-top: solid 3px rgb(44, 44, 44);
+  border-bottom: solid 3px rgb(44, 44, 44);
+  border-right: solid 3px rgb(44, 44, 44);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.3s;
+}
+.bar1 {
+  height: 7.5px;
+  width: 1.5px;
+  background-color: black;
+  position: relative;
+  top: 10px;
+  left: 16.5px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.bar2 {
+  height: 7.5px;
+  width: 1.5px;
+  background-color: black;
+  position: relative;
+  top: 2px;
+  left: 12px;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+.bar3 {
+  height: 10px;
+  width: 1.5px;
+  background-color: black;
+  position: relative;
+  top: -9px;
+  left: 15px;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+.searchByFilter:hover {
+  background-color: rgb(29, 29, 29);
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+}
+.dropDownArrowContainer:hover {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.dropDownArrowContainer:hover > .hov {
+  background-color: rgb(248, 248, 248);
+  transition: all 0.3s;
+}
+.searchByFilter:hover ~ .dropDownArrowContainer {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.searchByFilter:hover ~ .dropDownArrowContainer > .hov {
+  background-color: rgb(248, 248, 248);
+  transition: all 0.3s;
+}
+.option {
+  min-width: 230px;
+  height: 24px;
+  background-color: aliceblue;
+  padding: 2px;
+  border-radius: 5px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  top: 30px;
+  display: flex;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 4;
+  font-family: monospace;
+  border: solid 2px black;
+}
+.option:hover {
+  background-color: rgb(29, 29, 29);
+  color: rgb(255, 255, 255);
+}
+.option1 {
+  display: flex;
+  top: 65px;
+  opacity: 1;
+  pointer-events: all;
+}
+.option2 {
+  display: flex;
+  top: 98px;
+  opacity: 1;
+  pointer-events: all;
+}
+.option3 {
+  display: flex;
+  top: 131px;
+  opacity: 1;
+  pointer-events: all;
+}
+@keyframes option1OpenAnimate {
+  from {
+    display: none;
+    top: 30px;
+    opacity: 0;
+  }
+  to {
+    display: flex;
+    top: 65px;
+    opacity: 1;
+  }
+}
+@keyframes option2OpenAnimate {
+  from {
+    display: none;
+    top: 30px;
+    opacity: 0;
+  }
+  to {
+    display: flex;
+    top: 98px;
+    opacity: 1;
+  }
+}
+@keyframes option3OpenAnimate {
+  from {
+    display: none;
+    top: 30px;
+    opacity: 0;
+  }
+  to {
+    display: flex;
+    top: 131px;
+    opacity: 1;
+  }
+}
+@keyframes option1CloseAnimate {
+  from {
+    display: flex;
+    top: 65px;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    top: 30px;
+    opacity: 0;
+  }
+}
+@keyframes option2CloseAnimate {
+  from {
+    display: flex;
+    top: 98px;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    top: 30px;
+    opacity: 0;
+  }
+}
+@keyframes option3CloseAnimate {
+  from {
+    display: flex;
+    top: 131px;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    top: 30px;
+    opacity: 0;
+  }
+}
+.searchBarBox {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+}
+.iconContainer {
+  height: 30%;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  border-color: aliceblue;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: solid 3px rgb(44, 44, 44);
+  border-bottom: solid 3px rgb(44, 44, 44);
+  border-right: solid 3px rgb(44, 44, 44);
+  transition: all 0.3s;
+}
+.iconContainer:hover {
+  cursor: text;
+}
+.searchIcon {
+  height: 100%;
+  left: 25%;
+}
+.searchBar {
+  min-width: 250px;
+  height: 30%;
+  padding: 3px;
+  border: 0;
+  text-align: center;
+  border-color: aliceblue;
+  background-color: aliceblue;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top: solid 3px rgb(44, 44, 44);
+  border-bottom: solid 3px rgb(44, 44, 44);
+  border-left: solid 3px rgb(44, 44, 44);
+  transition: all 0.3s;
+}
+.searchBar:focus {
+  outline: none;
+  border-top: solid 3px royalblue;
+  border-bottom: solid 3px royalblue;
+  border-left: solid 3px royalblue;
+  transition: all 0.3s;
+}
+.searchBar:focus ~ .iconContainer {
+  border-top: solid 3px royalblue;
+  border-bottom: solid 3px royalblue;
+  border-right: solid 3px royalblue;
+  transition: all 0.3s;
+}
+.colorBoxes {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px 0 10px;
+}
+.colorBox {
+  height: 30%;
+  width: 30px;
+  margin: 3px;
+  border-radius: 5px;
+}
+.colorBox:hover {
+  cursor: pointer;
+}
+.notSelected > .left {
+  height: 25px;
+  width: 2.5px;
+  background-color: rgb(17, 17, 17);
+  position: relative;
+  left: 14px;
+  top: 0px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.notSelected > .right {
+  height: 25px;
+  width: 2.5px;
+  background-color: rgb(17, 17, 17);
+  position: relative;
+  left: 14px;
+  top: -25px;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+#c0 {
+  background-color: rgb(231, 247, 17);
+}
+#c1 {
+  background-color: cornflowerblue;
+}
+#c2 {
+  background-color: chartreuse;
+}
+#c3 {
+  background-color: crimson;
+}
+#c4 {
+  background-color: rgb(214, 214, 214);
+}
+#c0:hover {
+  background-color: rgb(246, 255, 117);
+}
+#c1:hover {
+  background-color: rgb(165, 190, 236);
+}
+#c2:hover {
+  background-color: rgb(194, 255, 133);
+}
+#c3:hover {
+  background-color: rgb(216, 98, 122);
+}
+#c4:hover {
+  background-color: rgb(255, 255, 255);
+}
+.navigateUp {
+  transform: scale(0.5);
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 45, 45);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2;
+  right: 30px;
+  bottom: 50px;
+}
+.logoutButton {
+  height: 30px;
+  width: 80px;
+  background-color: crimson;
+  color: aliceblue;
+  font-size: 14px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.logoutButton:hover {
+  background-color: rgb(167, 15, 45);
+  color: rgb(253, 253, 253);
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.logoutButton:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+.navigateUpVisibility {
+  transform: scale(1);
+  opacity: 1;
+}
+@keyframes addNavigateUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes removeNavigateUp {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+.navigateUpLeftBar {
+  width: 12px;
+  height: 2px;
+  left: 11px;
+  top: 18px;
+  transform: rotate(-60deg);
+  background-color: aliceblue;
+  position: absolute;
+}
+.navigateUpRightBar {
+  width: 12px;
+  height: 2px;
+  right: 11px;
+  top: 18px;
+  transform: rotate(60deg);
+  background-color: aliceblue;
+  position: absolute;
+}
+.navigateUpBottomBar {
+  width: 14px;
+  height: 2px;
+  right: 13px;
+  top: 23px;
+  transform: rotate(0deg);
+  background-color: aliceblue;
+  position: absolute;
+}
+.navigateUp:hover {
+  cursor: pointer;
+  background-color: rgb(255, 81, 81);
+}
+.addNote {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(35, 104, 255);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2;
+  right: 30px;
+  bottom: 50px;
+}
+.disabled {
+  background-color: rgb(18, 60, 150);
+  box-shadow: 0 0 2px 2px rgb(18, 60, 150);
+}
+.addNotePosition {
+  right: 90px;
+}
+@keyframes addNoteMoveRight {
+  from {
+    right: 90px;
+  }
+  to {
+    right: 30px;
+  }
+}
+@keyframes addNoteMoveLeft {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 90px;
+  }
+}
+.addNoteVerticalBar {
+  width: 15px;
+  height: 2px;
+  top: 19px;
+  left: 12.5px;
+  transform: rotate(90deg);
+  background-color: aliceblue;
+  position: absolute;
+}
+.addNoteHorizontalBar {
+  width: 15px;
+  height: 2px;
+  top: 19px;
+  left: 12.5px;
+  transform: rotate(0deg);
+  background-color: aliceblue;
+  position: absolute;
+}
+.addNote:hover {
+  cursor: pointer;
+  background-color: rgb(62, 123, 255);
+}
+.disabled:hover {
+  cursor: not-allowed;
+  background-color: rgb(18, 60, 150);
+  box-shadow: 0 0 2px 2px rgb(18, 60, 150);
+}
+.save {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 209, 181);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2;
+  right: 90px;
+  bottom: 50px;
+}
+.noChanges {
+  background-color: rgb(0, 102, 88);
+  box-shadow: 0 0 2px 2px rgb(0, 102, 88);
+}
+.savePosition {
+  right: 150px;
+}
+@keyframes saveMoveRight {
+  from {
+    right: 150px;
+  }
+  to {
+    right: 90px;
+  }
+}
+@keyframes saveMoveLeft {
+  from {
+    right: 90px;
+  }
+  to {
+    right: 150px;
+  }
+}
+.saveIcon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 7.5px;
+  top: 7.5px;
+}
+.save:hover {
+  cursor: pointer;
+  background-color: rgb(59, 218, 196);
+}
+.noChanges:hover {
+  cursor: not-allowed;
+  background-color: rgb(0, 102, 88);
+}

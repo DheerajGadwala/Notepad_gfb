@@ -1,0 +1,214 @@
+.note {
+  position: relative;
+  left: 0;
+  width: max(38%, 400px);
+  height: max(40vh, 300px);
+  margin: 2% 5% 2% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(1);
+  z-index: 1;
+}
+.deleting {
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+.note[colour="0"] {
+  background-color: rgb(231, 247, 17);
+}
+.note[colour="1"] {
+  background-color: cornflowerblue;
+}
+.note[colour="2"] {
+  background-color: chartreuse;
+}
+.note[colour="3"] {
+  background-color: crimson;
+}
+.note[colour="4"] {
+  background-color: rgb(226, 226, 226);
+}
+.bar {
+  width: 70%;
+  height: 2px;
+  background-color: black;
+}
+.noteTitle {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titleInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  width: 70%;
+  height: 70%;
+  overflow-y: hidden;
+}
+.titleInput.single-line {
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+}
+.titleInput.single-line br {
+  display: none;
+}
+.titleInput.single-line * {
+  display: inline;
+  white-space: nowrap;
+}
+.titleInput::-webkit-scrollbar {
+  height: 2px;
+}
+.titleInput::-webkit-scrollbar-track {
+  background: #696969;
+}
+.titleInput::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+}
+.titleInput::-webkit-scrollbar-thumb:hover {
+  background: rgb(75, 75, 75);
+}
+.noteContent {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contentInput {
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  width: 90%;
+  height: 70%;
+  padding: 5px;
+  display: inline-block;
+  overflow-y: auto;
+}
+.Input[colour="0"] {
+  border: solid 1.5px rgb(231, 247, 17);
+  background-color: rgb(179, 190, 17);
+}
+.Input[colour="1"] {
+  border: solid 1.5px cornflowerblue;
+  background-color: rgb(40, 109, 236);
+}
+.Input[colour="2"] {
+  border: solid 1.5px chartreuse;
+  background-color: rgb(92, 184, 0);
+}
+.Input[colour="3"] {
+  border: solid 1.5px crimson;
+  background-color: rgb(177, 0, 35);
+}
+.Input[colour="4"] {
+  border: solid 1.5px rgb(226, 226, 226);
+  background-color: rgb(163, 163, 163);
+}
+.Input[colour="0"]:focus {
+  border: solid 1.5px rgb(0, 0, 0);
+  transition: border 0.5s;
+  background-color: rgb(179, 190, 17);
+}
+.Input[colour="1"]:focus {
+  border: solid 1.5px rgb(0, 0, 0);
+  transition: border 0.5s;
+  background-color: rgb(40, 109, 236);
+}
+.Input[colour="2"]:focus {
+  border: solid 1.5px rgb(0, 0, 0);
+  transition: border 0.5s;
+  background-color: rgb(92, 184, 0);
+}
+.Input[colour="3"]:focus {
+  border: solid 1.5px rgb(0, 0, 0);
+  transition: border 0.5s;
+  background-color: rgb(177, 0, 35);
+}
+.Input[colour="4"]:focus {
+  border: solid 1.5px rgb(0, 0, 0);
+  transition: border 0.5s;
+  background-color: rgb(163, 163, 163);
+}
+.Input:focus {
+  outline: none;
+}
+.icons {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.coloursImage {
+  height: 30px;
+  width: 30px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.coloursImage:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+.coloursImage:active {
+  transform: scale(0.9);
+  transition: transform 0.5s;
+}
+.deleteImage {
+  height: 30px;
+  width: 30px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.deleteImage:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+.deleteImage:active {
+  transform: scale(0.9);
+  transition: transform 0.5s;
+}
+.leftImage {
+  height: 30px;
+  width: 30px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.leftImage:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+.leftImage:active {
+  transform: scale(0.9);
+  transition: transform 0.5s;
+}
+.rightImage {
+  height: 30px;
+  width: 30px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.rightImage:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+.rightImage:active {
+  transform: scale(0.9);
+  transition: transform 0.5s;
+}
+.loadingEnabledImages:hover {
+  cursor: not-allowed;
+}
